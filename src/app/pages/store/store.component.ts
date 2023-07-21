@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from 'src/app/components/product-card/product-card.component';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-store',
@@ -10,5 +11,5 @@ import { ProductCardComponent } from 'src/app/components/product-card/product-ca
   styleUrls: ['./store.component.scss'],
 })
 export class StoreComponent {
-  items = Array(100);
+  productService = inject(ProductsService);
 }

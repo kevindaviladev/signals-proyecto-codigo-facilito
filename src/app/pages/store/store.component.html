@@ -1,10 +1,8 @@
 <h1>Bienvenido a la tienda de Cody!</h1>
 <div class="container text-center">
   <div class="row">
-    <div
-      class="col gy-5"
-      *ngFor="let item of items">
-      <app-product-card></app-product-card>
+    <div class="col gy-5" *ngFor="let product of productService.products()">
+      <app-product-card [product]="product"></app-product-card>
     </div>
   </div>
 </div>
